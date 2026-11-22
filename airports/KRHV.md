@@ -11,6 +11,7 @@ code: KRHV
 chart: "https://aeronav.faa.gov/d-tpp/2611/05591AD.PDF"
 caption: "FAA Airport Diagram，2026-10-29 至 11-26。用于辨认平行跑道、滑行道和热点"
 noise: https://files.santaclaracounty.gov/migrated/PilotInsert-RHV.pdf
+pattern_axes: {"13L": 370, "31R": 370, "13R": 270, "31L": 270}
 runways: [["13L","左"],["31R","右"],["13R","右"],["31L","左"]]
 ---
 

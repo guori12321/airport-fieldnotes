@@ -5,8 +5,7 @@ layout: base
 <dl class="quick-facts"><div><dt>机场配置</dt><dd>{{ page.summary }}</dd></div><div><dt>场高 · ft MSL</dt><dd>{{ page.elevation }}</dd></div><div><dt>固定翼场周 · ft MSL</dt><dd>{{ page.pattern_height }}</dd></div></dl>
 <nav><a href="#diagram">机场图</a><a href="#pattern">Pattern</a><a href="#notes">跑道与障碍</a><a href="#radio">通信频率</a><a href="#video">实飞视频</a><a href="#local">租车与餐饮</a></nav>
 <section id="diagram"><h2>机场图</h2><figure><a href="{{ page.chart }}"><img class="chart" src="{{ '/assets/' | relative_url }}{{ page.code }}.png" alt="{{ page.code }} {{ page.caption }}"></a><figcaption>{{ page.caption }} · <a href="{{ page.chart }}">打开 FAA 原图 ↗</a></figcaption></figure></section>
-<section id="pattern"><h2>按跑道看 Pattern</h2><label>跑道端 <select id="runway">{% for r in page.runways %}<option value="{{ r[1] }}">{{ r[0] }}</option>{% endfor %}</select></label>
-<p id="description" aria-live="polite"></p><svg id="circuit" hidden viewBox="0 0 400 180" role="img" aria-label="场周转弯方向示意"><g id="legs" fill="none" stroke="#08786c" stroke-width="3"><path d="M200 145 V25 H65 V150 H200"/><path d="m195 53 5 -8 5 8 M147 20 l-8 5 8 5 M60 87 l5 8 5 -8 M125 145 l8 5 -8 5"/></g><rect x="193" y="61" width="14" height="63" fill="#263733"/><path d="M200 68 v49" stroke="white" stroke-dasharray="6 4"/></svg>
-<p>着陆方向朝上，仅示意左／右转。实际地标、减噪要求与场周位置见<a href="{{ page.noise }}">县方航线图</a>。跑道数据及适用条件见下表。</p></section>
+<section id="pattern"><h2>按跑道看 Pattern</h2>
+{% if page.pattern_axes %}{% include pattern-overview.html %}{% else %}<p>{% for end in page.runways %}{{ end[0] }} · {{ end[1] }}航线　{% endfor %}</p>{% endif %}
+</section>
 <article id="notes"><h2>飞行资料</h2>{{ content }}</article><footer><a href="https://github.com/guori12321/airport-fieldnotes/issues/new">补充视频、出入口或到访经验 ↗</a></footer>
-<script>const runway = document.querySelector('#runway'); function draw(){const right = runway.value === '右'; document.querySelector('#legs').setAttribute('transform',right?'translate(400 0) scale(-1 1)':''); document.querySelector('#description').textContent = runway.selectedOptions[0].text + ' · ' + runway.value + '航线'; document.querySelector('#circuit').removeAttribute('hidden');} runway.addEventListener('change',draw);draw();</script>

@@ -1,0 +1,42 @@
+<figure class="pattern-overview">
+<svg viewBox="0 0 640 400" role="img" aria-labelledby="pattern-title pattern-desc">
+  <title id="pattern-title">{{ page.code }} 各跑道端场周方向</title>
+  <desc id="pattern-desc">上方为跑道西北端。{% for end in page.runways %}{{ end[0] }} 为{{ end[1] }}航线。{% endfor %}箭头表示下风边和横向航段的飞行方向。</desc>
+  <text class="orientation" x="320" y="24">西北端</text>
+  {% for end in page.runways %}
+    {% assign number = end[0] | slice: 0, 2 | plus: 0 %}
+    {% assign axis = page.pattern_axes[end[0]] %}
+    {% if number < 19 %}
+      {% assign direction = 'outbound-se' %}
+      {% assign top = 52 %}{% assign bottom = 348 %}
+      {% assign start = bottom %}{% assign finish = top %}
+      {% if end[1] == '左' %}{% assign edge = 596 %}{% else %}{% assign edge = 44 %}{% endif %}
+    {% else %}
+      {% assign direction = 'outbound-nw' %}
+      {% assign top = 84 %}{% assign bottom = 316 %}
+      {% assign start = top %}{% assign finish = bottom %}
+      {% if end[1] == '右' %}{% assign edge = 540 %}{% else %}{% assign edge = 100 %}{% endif %}
+    {% endif %}
+    {% assign halfway = axis | plus: edge | divided_by: 2 %}
+    <g class="circuit-end {{ direction }}" data-runway="{{ end[0] }}">
+      <defs><marker id="arrow-{{ end[0] }}" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0 L10 5 L0 10 Z"/></marker></defs>
+      <path class="track" d="M{{ axis }} 200 V{{ start }} H{{ edge }} V{{ finish }} H{{ axis }} V200"/>
+      <path class="course" marker-mid="url(#arrow-{{ end[0] }})" d="M{{ axis }} {{ start }} H{{ halfway }} H{{ edge }} M{{ edge }} {{ start }} V200 V{{ finish }} M{{ edge }} {{ finish }} H{{ halfway }} H{{ axis }}"/>
+      <text x="{{ halfway }}" y="{{ start | minus: 9 }}">{{ end[0] }} · {{ end[1] }}航线</text>
+    </g>
+  {% endfor %}
+  {% for end in page.runways %}
+    {% assign axis = page.pattern_axes[end[0]] %}
+    {% assign number = end[0] | slice: 0, 2 | plus: 0 %}
+    {% if number < 19 %}
+      <rect x="{{ axis | minus: 11 }}" y="128" width="22" height="144" rx="2" fill="#314842"/>
+      <path d="M{{ axis }} 138 V262" stroke="white" stroke-width="2" stroke-dasharray="8 6"/>
+      <text class="threshold" x="{{ axis }}" y="120">{{ end[0] }} ↓</text>
+    {% else %}
+      <text class="threshold" x="{{ axis }}" y="295">{{ end[0] }} ↑</text>
+    {% endif %}
+  {% endfor %}
+  <text class="orientation" x="320" y="386">东南端</text>
+</svg>
+<figcaption>箭头表示飞行方向。同一侧的往返航线已错开绘制，间距和转弯点仅供示意。实际地标与减噪要求见<a href="{{ page.noise }}">县方航线图</a>。</figcaption>
+</figure>

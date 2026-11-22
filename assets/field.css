@@ -10,3 +10,9 @@ body:has(.atlas) header,main:has(.atlas){max-width:1120px}.atlas h1{font-family:
 #terrain-map .maplibregl-ctrl button{padding:0}
 .quick-facts{display:flex;flex-wrap:wrap;gap:16px 36px;border-block:1px solid #c4cec4;padding:14px 0}
 .quick-facts dt{font-size:13px;color:#50695f}.quick-facts dd{margin:3px 0 0;font-size:18px;font-weight:650}
+
+.pattern-overview svg{display:block;width:100%;max-width:740px;background:#eff3ed;border:1px solid #c5d2c6}
+.pattern-overview text{text-anchor:middle;font:600 20px/1 sans-serif;paint-order:stroke;stroke:#eff3ed;stroke-width:5px;stroke-linejoin:round}
+.pattern-overview .orientation{font-size:18px;fill:#51685b}.pattern-overview .threshold{font:bold 19px monospace;fill:#283c35}
+.circuit-end{color:#006e66;fill:currentColor}.outbound-nw{color:#924b20}.circuit-end .track{fill:none;stroke:currentColor;stroke-width:3}
+.outbound-nw .track{stroke-dasharray:8 5}.circuit-end .course{fill:none;stroke:transparent;stroke-width:3.5}
