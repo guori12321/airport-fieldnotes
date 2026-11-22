@@ -5,7 +5,8 @@
   <text class="orientation" x="320" y="24">西北端</text>
   {% for end in page.runways %}
     {% assign number = end[0] | slice: 0, 2 | plus: 0 %}
-    {% assign axis = page.pattern_axes[end[0]] %}
+    {% assign runway_id = end[0] %}
+    {% assign axis = page.pattern_axes[runway_id] %}
     {% if number < 19 %}
       {% assign direction = 'outbound-se' %}
       {% assign top = 52 %}{% assign bottom = 348 %}
@@ -26,7 +27,8 @@
     </g>
   {% endfor %}
   {% for end in page.runways %}
-    {% assign axis = page.pattern_axes[end[0]] %}
+    {% assign runway_id = end[0] %}
+    {% assign axis = page.pattern_axes[runway_id] %}
     {% assign number = end[0] | slice: 0, 2 | plus: 0 %}
     {% if number < 19 %}
       <rect x="{{ axis | minus: 11 }}" y="128" width="22" height="144" rx="2" fill="#314842"/>
