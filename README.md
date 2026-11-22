@@ -23,3 +23,5 @@
 社区补充可提 Issue 或 PR：附机场、跑道端、资料链接和日期；视频请加时间点及画面能确认的地标。请勿从旧视频抄录现行频率或推断许可。首批仅为机场熟悉研究，不包含实时简报。
 
 [浏览静态网站](https://guori12321.github.io/airport-fieldnotes/)。GitHub Pages 从 main 的根目录构建。添加机场时复制 airports 中的一份 Markdown，填写页头的图源、图版日期、减噪图与各跑道端转向，放入同名机场代码的 PNG 预览，填写 city、aliases 和 summary 后，目录会自动收录。更新跑道时同步核对页头和表格。地面服务注明场内或场外、服务方链接、接送是否确认。
+
+交互地图使用随站发布的 MapLibre GL JS 5.12.0。全球海岸线来自 Natural Earth，南湾地形从 Mapzen Terrarium 的 z8 原始高程生成，同一批高程用于地形着色和三维起伏。跑道中心线取自 2026-10-29 FAA NASR 的物理跑道端。机场页的 position 按经度、纬度排列。区域外仅显示全球陆地轮廓。数据许可及署名见 [Mapzen 数据说明](https://github.com/tilezen/joerd/blob/master/docs/attribution.md) 和 assets/map/LICENSE.txt。
