@@ -1,4 +1,12 @@
-# KRHV · Reid-Hillview，San Jose
+---
+layout: airport
+title: Reid-Hillview
+code: KRHV
+chart: "https://aeronav.faa.gov/d-tpp/2611/05591AD.PDF"
+caption: "FAA Airport Diagram，2026-10-29 至 11-26。用于辨认平行跑道、滑行道和热点"
+noise: https://files.santaclaracounty.gov/migrated/PilotInsert-RHV.pdf
+runways: [["13L","左"],["31R","右"],["13R","右"],["31L","左"]]
+---
 
 查核：2026-11-22。[FAA 西南区 Chart Supplement](https://aeronav.faa.gov/Upload_313-d/supplements/CS_SW_20261029.pdf) 印刷页 279、648（10/29–12/24/2026）。障碍和左右航线已对照 [FAA NASR 10/29 周期 CSV](https://nfdc.faa.gov/webContent/28DaySub/extra/29_Oct_2026_CSV.zip) 的 APT_RWY_END 与字段说明。
 
@@ -18,3 +26,13 @@
 **噪音与识别**：场周离场转弯有最低高度限制；31R 特例是起飞后在可行时略向右避开离场端外约半英里的学校。补充本列 0500–1500Z‡ 不做 touch-and-go（通常本地 21:00–07:00），场周内不做模拟紧急情况。夜间机场东北侧平行街灯易误认为跑道灯；13R/31L 无跑道边灯，不能把两条平行道的灯光条件互换。
 
 **地面**：本版热点 HS1 为 D/Z/Y 一带，HS2 为 Y、Z、Z1–Z4 一带。把预定停机位置和可能的穿越点在现行图上走一遍。[FAA RHV 图示、实飞视频及手册入口](https://www.faa.gov/flight_deck/rhv)。旧视频里的热点编号需回到现行图核对。
+
+<h2 id="video">实飞视频</h2>
+
+[FAA From the Flight Deck · 6:48 起](https://www.youtube.com/watch?v=-WiINy_Wz3I&t=408s)。看 13L/31R 与另一条平行跑道的位置，再对照上方机场图找滑行道。视频中的热点编号可能与现行图不同。
+
+<h2 id="local">租车与附近餐饮</h2>
+
+**租车**　[Budget · Eastridge Mall 门店](https://www.budget.com/en/locations/us/ca/san-jose/bgsj2)，在机场外的商场 D 入口。预订时确认取还车时间，从访客机坪另行安排前往商场。
+
+**餐饮**　[Red Robin · Eastridge](https://www.redrobin.com/locations/ca/sanjose/eastridge-194)，商场内的汉堡餐厅，可以把吃饭和取车安排在同一站。
