@@ -1,5 +1,8 @@
 ---
 layout: airport
+city: San Jose
+aliases: 圣何塞 圣何塞市 里德 希尔维尤 RHV 加州 南湾 California
+summary: 塔台机场 · 平行跑道
 title: Reid-Hillview
 code: KRHV
 chart: "https://aeronav.faa.gov/d-tpp/2611/05591AD.PDF"

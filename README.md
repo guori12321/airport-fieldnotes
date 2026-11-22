@@ -22,4 +22,4 @@
 
 社区补充可提 Issue 或 PR：附机场、跑道端、资料链接和日期；视频请加时间点及画面能确认的地标。请勿从旧视频抄录现行频率或推断许可。首批仅为机场熟悉研究，不包含实时简报。
 
-[浏览静态网站](https://guori12321.github.io/airport-fieldnotes/)。GitHub Pages 从 main 的根目录构建。添加机场时复制 airports 中的一份 Markdown，填写页头的图源、图版日期、减噪图与各跑道端转向，放入同名机场代码的 PNG 预览，在 index.md 加入口。更新跑道时同步核对页头和表格。地面服务注明场内或场外、服务方链接、接送是否确认。
+[浏览静态网站](https://guori12321.github.io/airport-fieldnotes/)。GitHub Pages 从 main 的根目录构建。添加机场时复制 airports 中的一份 Markdown，填写页头的图源、图版日期、减噪图与各跑道端转向，放入同名机场代码的 PNG 预览，填写 city、aliases 和 summary 后，目录会自动收录。更新跑道时同步核对页头和表格。地面服务注明场内或场外、服务方链接、接送是否确认。
